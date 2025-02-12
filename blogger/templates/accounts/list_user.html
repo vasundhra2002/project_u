@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-5"> Name</div>
                 <div class="col-5"> Email</div>
-                <div class="col-1"> Delete</div>
+                <div class="col-2"> Delete</div>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                         
                         <div class="col-5"> {{ user.email }} </div>
 
-                        <div class="col-1">                        
+                        <div class="col-2">                        
                             <a href="{% url 'delete-user' user.id %}">
                                 <button type="button" class="close" ata-dismiss="alert" style="color: red;">X</button>
                             </a>
@@ -49,7 +49,7 @@
                         
                     <div class="col-5"> {{ user.email }} </div>
 
-                    <div class="col-1">                        
+                    <div class="col-2">                        
                         <a href="{% url 'delete-user' user.id %}">
                             <button type="button" class="close" ata-dismiss="alert" style="color: red;">X</button>
                         </a>

@@ -42,6 +42,7 @@ def delete_blog(request, blog_id):
         'title' : 'Delete',
         'message' : 'Successfully deleted the blog',
     }
+
     try:
         blog = BlogPost.objects.get(id=blog_id)
         blog.delete()

@@ -42,7 +42,7 @@
 
                         <div class="col-3"> {{ item.created_at }} </div>
 
-                        <div class="col-3"> {{ author.username }} </div>
+                        <div class="col-3"> {{ item.author }} </div>
                     </div>
                 </div>
             {% else %}
@@ -57,7 +57,7 @@
 
                         <div class="col-3"> {{ item.created_at }} </div>
 
-                        <div class="col-3"> {{ author.name }} </div>
+                        <div class="col-3"> {{ item.author }} </div>
                     </div>
                 </div>
             {% endif %}
