@@ -6,7 +6,7 @@ from django.urls import reverse
 # Create your models here.
 
 class Post(models.Model):#Inherits from Django’s base model class, making it a Django model.
-    author= models.ForeignKey('auth.User') #Defines a foreign key relationship with Django’s built-in User model.
+    author= models.ForeignKey('auth.User', on_delete=models.DO_NOTHING) #Defines a foreign key relationship with Django’s built-in User model.
     title= models.CharField(max_length=200)
     text=models.TextField()
     create_date=models.DateTimeField(default=timezone.now)
@@ -26,7 +26,7 @@ class Post(models.Model):#Inherits from Django’s base model class, making it a
         return self.title
 
 class Comment(models.Model):
-    post= models.ForeignKey('blog.Post',related_name='comments')
+    post= models.ForeignKey('blog.Post',related_name='comments', on_delete=models.DO_NOTHING)
     author =models.CharField(max_length=200)
     text =models.TextField()
     created_date = models.DateTimeField(default=timezone.now)

@@ -1,0 +1,47 @@
+{% extends 'common/base.html' %}
+{% block title %} Create New Blog {% endblock title %}
+
+{% block header %}
+    Create New Blog
+{% endblock header%}
+
+{% block body %}
+    <div class="form-container">
+        <h2 class="form-container-title">Blog</h2>
+    
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="row" style="padding: 10px;">
+                <div class="col-3">
+                    <label for="title">title:</label> 
+                </div>
+                <div class="col-9">
+                    {{ form.title }}
+                </div>
+            </div>
+    
+            <div class="row" style="padding: 10px;">
+                <div class="col-3">
+                    <label for="content">Content:</label>
+                </div>
+                <div class="col-9">
+                    {{ form.content }}
+                </div>
+            </div>
+
+            <div class="row" style="padding: 10px;">
+                <div class="col-3">
+                    <label for="author">author</label>
+                </div>
+                <div class="col-9">
+                    {{ form.author }}
+                </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block">Save</button>
+        </form>
+    </div>
+    
+
+{% endblock %}
